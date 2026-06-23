@@ -1,0 +1,329 @@
+/* FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* GENERALES */
+html {
+  scroll-behavior: smooth;
+}
+
+/* FONDO FIJO */
+
+.bg-fixed {
+  position: fixed;
+  inset: 0;
+  background-image: url("back.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Para que el fondo general no tape la imagen */
+
+body {
+  background-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #101010;
+  color: #efeeee;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+  padding: 20px 0;
+    background-color: #101010;
+}
+
+.navbar-brand img {
+  height: 30px;
+  width: auto;
+}
+
+.nav-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #efeeee !important;
+  margin-left: 20px;
+}
+
+.nav-link:hover {
+  color: #efeeee !important;
+}
+
+.navbar-toggler {
+  border: none;
+  box-shadow: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23efeeee' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* HERO */
+
+.h1-custom {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 300;      /* PT Sans Narrow no tiene 100 */
+  font-size: 9rem;       /* antes 9rem */
+  line-height: 0.95;
+  color: #efeeee;
+  margin-bottom: 1rem;
+  letter-spacing: 0.08em;
+}
+
+
+.p-custom {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 200;
+  color: #efeeee;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+}
+
+.hero {
+  min-height: 87vh;
+  padding-top: 200px;
+}
+
+/* SCROLL ARROW */
+
+.scroll-arrow {
+  display: block;
+
+  width: 35px;
+  height: 35px;
+
+  margin: 70px auto 0;
+
+  border-right: 1px solid rgba(239, 238, 238, 0.5);
+  border-bottom: 1px solid rgba(239, 238, 238, 0.5);
+
+  transform: rotate(45deg);
+
+  opacity: 1;
+
+  animation: bounce 2s infinite;
+}
+
+/* TITULARES GENERALES */
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 400;
+  color: #efeeee;
+}
+
+/* PORTFOLIO */
+
+/* PORTFOLIO */
+
+.portfolio {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  max-width: 1500px;
+  margin: 0 auto;
+
+  padding: 100px 80px;
+  gap: 90px;
+}
+
+.portfolio-item {
+  flex: 1;
+}
+
+/* Foto central más abajo */
+
+.portfolio-item:nth-child(2) {
+  margin-top: 140px;
+}
+
+/* Numeración */
+
+.numero {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #efeeee;
+
+  margin-bottom: 1rem;
+}
+
+/* Fotos */
+
+.portfolio-item img {
+  width: 100%;
+  display: block;
+
+  border: 1px solid rgba(239, 238, 238, 0.4);
+  padding: 6px;
+}
+
+/* Títulos */
+
+.portfolio-item h3 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #efeeee;
+
+  margin-top: 0.8rem;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .portfolio {
+    flex-direction: column;
+    align-items: center;
+
+    padding: 70px 30px;
+    gap: 70px;
+  }
+
+  .portfolio-item,
+  .portfolio-item:nth-child(2) {
+    width: 90%;
+    max-width: 450px;
+
+    margin-top: 0;
+  }
+
+  .portfolio-item img {
+    width: 100%;
+  }
+
+  .numero,
+  .portfolio-item h3 {
+    text-align: center;
+  }
+}
+
+/* MANIFESTO - QUIÉNES SOMOS */
+
+.manifesto {
+     padding: 40px;
+       font-family: 'Montserrat', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 200;
+  color: #efeeee;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+}
+
+/* ANIMATED MARQUEE */
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+
+  border-top: 1px solid rgba(239, 238, 238, 0.4);
+
+  padding: 5px;
+
+   margin-TOP: 100px;
+  margin-bottom: 30px;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 150s linear infinite;
+}
+
+.marquee-track span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  color: #efeeee;
+  white-space: nowrap;
+  padding-right: 80px;
+    letter-spacing: 0.2em;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ANILLOS */
+
+.custom-cursor {
+  position: fixed;
+
+  width: 80px;
+  height: 80px;
+
+  background-image: url("anillos.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  pointer-events: none;
+  z-index: 9999;
+
+  transform: translate(-50%, -50%);
+}
+
+body {
+  cursor: none;
+}
+
+.manifiesto-section {
+    padding: 20px;
+}
+
+.manifiesto-texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.76rem;
+    font-weight: 200;
+    color: #efeeee;
+    line-height: 1.4;
+    letter-spacing: 0.2em;
+     margin-TOP: 20px;
+  margin-bottom: 100px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .h1-custom {
+    font-size: 6rem;
+  }
+
+  .navbar-brand img {
+    height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    padding: 80px 30px;
+  }
