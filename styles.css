@@ -148,6 +148,12 @@ h6 {
   flex: 1;
 }
 
+/* Portfolio 2 */
+
+.portfolio-close {
+  padding-top: 0;
+}
+
 /* Foto central más abajo */
 
 .portfolio-item:nth-child(2) {
